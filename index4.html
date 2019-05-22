@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>App8 Geolocalizacion</title>
+<title>Ubicacion en el mapa de google</title>
 </head>
 <body>
 
@@ -11,10 +11,10 @@
 <div id="mapholder"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFd0aiE5FttY8XRAFI9ecTSpgo2vP-qMk"></script>
 
-<button onClick="cargarmap()">Cargar Mapa</button>
+<button onClick="cargamap()">Cargar Mapa</button>
 <script type="text/javascript">
 var x=document.getElementById("demo");
-function cargarmap(){
+function cargamap(){
 	navigator.geolocation.getCurrentPosition(showPosition,showError);
 	function showPosition(position)
 	{
@@ -26,7 +26,7 @@ function cargarmap(){
 		mapholder.style.width ='750px';
 		var myOptions={
 			center:latlon,zoom:17,
-			mapTypeld:google.maps.mapTypeld.ROADMAP,
+			mapTypeId:google.maps.mapTypeld.ROADMAP,
 			mapTypeControl:false,
 			navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
 		};
